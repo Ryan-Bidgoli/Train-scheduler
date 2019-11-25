@@ -44,6 +44,12 @@ $(document).ready(function(){
         var minAway = childSnapshot.val().frequency - remainder;
         var nextTrain = moment().add(minAway, "minutes");
         nextTrain = moment(nextTrain).format("hh:mm");
+        
+       $("#add-row").append("<tr><td>" + childSnapshot.val().name +
+                "</td><td>" + childSnapshot.val().destination +
+                "</td><td>" + childSnapshot.val().frequency +
+                "</td><td>" + nextTrain + 
+                "</td><td>" + minAway + "</td></tr>");
 
     });
 });
