@@ -36,6 +36,14 @@ $(document).ready(function(){
         $("form")[0].reset();
     });
    database.ref().on("child_added", function(childSnapshot) {
-         
+        var nextArr;
+        var minAway;
+        var firstTrainNew = moment(childSnapshot.val().firstTrain, "hh:mm").subtract(1, "years");
+        var diffTime = moment().diff(moment(firstTrainNew), "minutes");
+        var remainder = diffTime % childSnapshot.val().frequency;
+        var minAway = childSnapshot.val().frequency - remainder;
+        var nextTrain = moment().add(minAway, "minutes");
+        nextTrain = moment(nextTrain).format("hh:mm");
+
     });
 });
