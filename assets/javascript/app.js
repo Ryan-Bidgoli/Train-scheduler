@@ -52,4 +52,7 @@ $(document).ready(function(){
                 "</td><td>" + minAway + "</td></tr>");
 
     });
+   function(errorObject) {
+            console.log("Errors handled: " + errorObject.code);
+    });
 });
