@@ -8,5 +8,7 @@ body{
 }
 .jumbotron{
 	background-color: #5cb85c;
-	color: #eeeecc;
+	color: #eeeecc; 
+	padding-top: 1%;
+	padding-bottom: 2%;
 }
