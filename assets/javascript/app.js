@@ -11,4 +11,9 @@ $(document).ready(function(){
     firebase.initializeApp(config);
 
     var database = firebase.database();
+   
+    var name;
+    var destination;
+    var firstTrain;
+    var frequency = 0;
 }
