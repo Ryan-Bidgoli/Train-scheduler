@@ -16,4 +16,9 @@ $(document).ready(function(){
     var destination;
     var firstTrain;
     var frequency = 0;
+   
+   
+    $("#add-train").on("click", function() {
+       
+    });
 }
