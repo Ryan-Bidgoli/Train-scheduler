@@ -35,4 +35,7 @@ $(document).ready(function(){
         });
         $("form")[0].reset();
     });
-}
+   database.ref().on("child_added", function(childSnapshot) {
+         
+    });
+});
