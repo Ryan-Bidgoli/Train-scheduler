@@ -19,10 +19,20 @@ $(document).ready(function(){
    
    
     $("#add-train").on("click", function() {
+       
         event.preventDefault();
         name = $("#train-name").val().trim();
         destination = $("#destination").val().trim();
         firstTrain = $("#first-train").val().trim();
         frequency = $("#frequency").val().trim();
+       
+       database.ref().push({
+            name: name,
+            destination: destination,
+            firstTrain: firstTrain,
+            frequency: frequency,
+            dateAdded: firebase.database.ServerValue.TIMESTAMP
+        });
+        $("form")[0].reset();
     });
 }
