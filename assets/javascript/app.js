@@ -51,7 +51,7 @@ $(document).ready(function(){
                 "</td><td>" + nextTrain + 
                 "</td><td>" + minAway + "</td></tr>");
 
-    });
+    },
    function(errorObject) {
             console.log("Errors handled: " + errorObject.code);
     });
